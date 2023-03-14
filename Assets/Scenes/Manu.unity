@@ -3947,7 +3947,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 3
-  m_Spacing: 15.85
+  m_Spacing: -180.4
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -3983,7 +3983,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _contentTransform: {fileID: 2011061809}
   _scrollbar: {fileID: 2047190439}
-  _snapSpeed: 0.188
+  _snapSpeed: 0.1
+  _targetScale: {x: 1, y: 1}
+  _startScale: {x: 0.8, y: 0.8}
 --- !u!224 &2021558212 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3565306215825987327, guid: 4b0b133105d95584f84f297d0c884de7,
@@ -4072,7 +4074,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.1954081
+  m_Size: 0.30253145
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4214,11 +4216,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2011061809}
     m_Modifications:
-    - target: {fileID: 1260447829695296943, guid: 4b0b133105d95584f84f297d0c884de7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000011444092
-      objectReference: {fileID: 0}
     - target: {fileID: 3565306215825987320, guid: 4b0b133105d95584f84f297d0c884de7,
         type: 3}
       propertyPath: m_Name
