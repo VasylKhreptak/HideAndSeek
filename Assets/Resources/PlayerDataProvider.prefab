@@ -47,7 +47,6 @@ MonoBehaviour:
   _defaultPlayerData:
     coins: 0
     keys: 0
-    levelsData:
-    - levelID: 0
-      hidePlayerFinished: 0
+    levels:
+    - hidePlayerFinished: 0
       seekPlayerFinished: 0

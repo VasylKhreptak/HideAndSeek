@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 namespace Data
 {
@@ -8,6 +9,6 @@ namespace Data
     {
         public int coins;
         public int keys;
-        public List<LevelData> levelsData;
+        public List<LevelData> levels;
     }
 }
