@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3868505128714614767}
   - component: {fileID: 2265698692313458639}
   - component: {fileID: -2226257135335551412}
+  - component: {fileID: 638476372750016638}
+  - component: {fileID: -3510278803943825109}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -48,6 +50,8 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: -2226257135335551412}
+  - {fileID: 638476372750016638}
+  - {fileID: -3510278803943825109}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -75,4 +79,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerDataProviderPrefab: {fileID: 9219822581829765864, guid: 2bc6a0347887a324ba6e2222de8d83c9,
+    type: 3}
+--- !u!114 &638476372750016638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662414779800547405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1004928acc99824c9af2797a2cc42f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coinBankPrefab: {fileID: 8668918015538872484, guid: f3a144492088a464484a54792c47ea28,
+    type: 3}
+--- !u!114 &-3510278803943825109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662414779800547405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb2df08a25cfa440b40191205b9ef71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyBankPrefab: {fileID: 7734870228280573067, guid: c03a6fc5c1a0a3648af160b209ab245f,
     type: 3}
