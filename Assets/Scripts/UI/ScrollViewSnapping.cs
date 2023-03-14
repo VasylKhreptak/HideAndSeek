@@ -1,3 +1,5 @@
+using System;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +15,10 @@ namespace UI
         [SerializeField, Range(0f, 1f)] private float _snapSpeed;
         [SerializeField] private Vector2 _targetScale = new Vector2(1.1f, 1.1f);
         [SerializeField] private Vector2 _startScale = new Vector2(1f, 1f);
+        
+        private ReactiveProperty<GameObject> _currentObjectProperty = new ReactiveProperty<GameObject>();
 
-        private GameObject _currentObject;
+        public IReadOnlyReactiveProperty<GameObject> CurrentObjectProperty => _currentObjectProperty;
 
         private float _scrollbarPosition;
         private float _halfDistance;
@@ -23,7 +27,7 @@ namespace UI
 
         private int _childCount;
 
-        public GameObject CurrentObject => _currentObject;
+        public GameObject CurrentObject => _currentObjectProperty.Value;
 
         #region MonoBehaviour
 
@@ -83,7 +87,7 @@ namespace UI
                     Transform child = _contentTransform.GetChild(i);
                     child.localScale = Vector2.Lerp(child.localScale, _targetScale, _snapSpeed);
 
-                    _currentObject = child.gameObject;
+                    _currentObjectProperty.Value = child.gameObject;
 
                     for (int a = 0; a < _positions.Length; a++)
                     {
