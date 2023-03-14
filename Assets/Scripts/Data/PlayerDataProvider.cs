@@ -35,21 +35,12 @@ namespace Data
         {
             string data = PlayerPrefs.GetString(PLAYER_DATA_KEY, string.Empty);
 
-            if (data == string.Empty)
-            {
-                return defaultData;
-            }
-
-            Debug.Log("Loaded");
-            
-            return JsonUtility.FromJson<PlayerData>(data);
+            return data == string.Empty ? defaultData : JsonUtility.FromJson<PlayerData>(data);
         }
 
         private void SaveData(PlayerData playerData)
         {
             PlayerPrefs.SetString(PLAYER_DATA_KEY, JsonUtility.ToJson(playerData));
-            
-            Debug.Log("Saved");
         }
     }
 }
