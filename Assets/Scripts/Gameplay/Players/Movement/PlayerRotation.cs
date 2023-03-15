@@ -1,56 +1,58 @@
-using CBA.Delay;
 using Events.Screen;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlayerRotation : MonoBehaviour
+namespace Gameplay.Players.Movement
 {
-    [Header("References")]
-    [SerializeField] private Transform _transform;
-
-    [Header("Preferences")]
-    [SerializeField] private float _speed = 5f;
-
-    [Header("Events")]
-    [SerializeField] private OnPointerDownEvent _pointerDownEvent;
-    [SerializeField] private OnDragEvent _onDragEvent;
-
-    private Vector2 _previousPosition;
-
-    #region MonoBehaviour
-
-    private void OnValidate()
+    public class PlayerRotation : MonoBehaviour
     {
-        _transform ??= GetComponent<Transform>();
-        _pointerDownEvent ??= FindObjectOfType<OnPointerDownEvent>();
-        _onDragEvent ??= FindObjectOfType<OnDragEvent>();
-    }
+        [Header("References")]
+        [SerializeField] private Transform _transform;
 
-    private void OnEnable()
-    {
-        _pointerDownEvent.onPointerDown += OnTouch;
-        _onDragEvent.onDrag += OnDrag;
-    }
+        [Header("Preferences")]
+        [SerializeField] private float _speed = 5f;
 
-    private void OnDisable()
-    {
-        _pointerDownEvent.onPointerDown -= OnTouch;
-        _onDragEvent.onDrag -= OnDrag;
-    }
+        [Header("Events")]
+        [SerializeField] private OnPointerDownEvent _pointerDownEvent;
+        [SerializeField] private OnDragEvent _onDragEvent;
 
-    #endregion
+        private Vector2 _previousPosition;
 
-    private void OnTouch(PointerEventData data)
-    {
-        _previousPosition = data.position;
-    }
+        #region MonoBehaviour
 
-    private void OnDrag(PointerEventData pointerData)
-    {
-        Vector2 currentPosition = pointerData.position;
-        Vector2 direction = currentPosition - _previousPosition;
-        _previousPosition = currentPosition;
+        private void OnValidate()
+        {
+            _transform ??= GetComponent<Transform>();
+            _pointerDownEvent ??= FindObjectOfType<OnPointerDownEvent>();
+            _onDragEvent ??= FindObjectOfType<OnDragEvent>();
+        }
 
-        transform.Rotate(Vector3.up, direction.x * _speed * Time.deltaTime);
+        private void OnEnable()
+        {
+            _pointerDownEvent.onPointerDown += OnTouch;
+            _onDragEvent.onDrag += OnDrag;
+        }
+
+        private void OnDisable()
+        {
+            _pointerDownEvent.onPointerDown -= OnTouch;
+            _onDragEvent.onDrag -= OnDrag;
+        }
+
+        #endregion
+
+        private void OnTouch(PointerEventData data)
+        {
+            _previousPosition = data.position;
+        }
+
+        private void OnDrag(PointerEventData pointerData)
+        {
+            Vector2 currentPosition = pointerData.position;
+            Vector2 direction = currentPosition - _previousPosition;
+            _previousPosition = currentPosition;
+
+            transform.Rotate(Vector3.up, direction.x * _speed * Time.deltaTime);
+        }
     }
 }
