@@ -80,7 +80,7 @@ MonoBehaviour:
   _updateType: 0
   _duration: 1
   _transform: {fileID: 4050268910883315295}
-  _from: 18
+  _from: 17.5
   _to: 18.5
   _snapping: 0
 --- !u!114 &4616680074242276546
