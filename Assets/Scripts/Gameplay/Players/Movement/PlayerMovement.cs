@@ -7,10 +7,12 @@ namespace Gameplay.Players.Movement
     {
         [Header("References")]
         [SerializeField] private Transform _transform;
-        [SerializeField] private CharacterController _characterController;
+        [SerializeField] private Rigidbody _rigidbody;
 
         [Header("Preferences")]
-        [SerializeField] private float _speed = 5f;
+        [SerializeField] private float _force = 5f;
+        [SerializeField] private float _maxSpeed;
+        [SerializeField] private ForceMode _forceMode = ForceMode.Force;
 
         private Joystick _joystick;
 
@@ -25,7 +27,7 @@ namespace Gameplay.Players.Movement
         private void OnValidate()
         {
             _transform ??= GetComponent<Transform>();
-            _characterController ??= GetComponent<CharacterController>();
+            _rigidbody ??= GetComponent<Rigidbody>();
         }
 
         private void Update()
@@ -36,9 +38,9 @@ namespace Gameplay.Players.Movement
             Vector3 direction = new Vector3(horizontal, 0f, vertical);
             direction = Vector3.ClampMagnitude(direction, 1f);
             direction = _transform.rotation * direction;
-            Vector3 motion = direction * _speed;
-
-            _characterController.Move(motion * Time.deltaTime);
+            
+            _rigidbody.AddForce(direction * _force, _forceMode);
+            _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
         }
 
         #endregion
