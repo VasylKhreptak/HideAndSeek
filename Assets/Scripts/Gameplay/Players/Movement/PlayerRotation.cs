@@ -23,8 +23,6 @@ namespace Gameplay.Players.Movement
         private void OnValidate()
         {
             _transform ??= GetComponent<Transform>();
-            _pointerDownEvent ??= FindObjectOfType<OnPointerDownEvent>();
-            _onDragEvent ??= FindObjectOfType<OnDragEvent>();
         }
 
         private void OnEnable()
