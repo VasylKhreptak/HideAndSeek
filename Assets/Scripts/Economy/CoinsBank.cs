@@ -14,12 +14,17 @@ namespace Economy
         {
             _playerDataProvider = playerDataProvider;
         }
-
-        [Inject] private DiContainer _container;
-
+        
         private void Start()
         {
             Add(_playerDataProvider.Data.coins);
+        }
+        
+        public override void Add(int value)
+        {
+            base.Add(value);
+            
+            _playerDataProvider.Data.coins = this.value;
         }
     }
 }
