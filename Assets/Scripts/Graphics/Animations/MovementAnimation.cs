@@ -1,4 +1,4 @@
-using Adapters.Core;
+using Providers.Core;
 using UnityEngine;
 
 namespace Graphics.Animations
@@ -7,12 +7,12 @@ namespace Graphics.Animations
     {
         [Header("References")]
         [SerializeField] private Animator _animator;
-        [SerializeField] private Vector3Adapter _velocityProvider;
+        [SerializeField] private Vector3Provider _velocityProvider;
 
         [Header("Preferences")]
         [SerializeField] private float _minSpeed;
         [SerializeField] private float _maxSpeed;
-        
+
         [Header("Animator Preferences")]
         [SerializeField] private string _speedParameterName = "Speed";
 
@@ -21,14 +21,14 @@ namespace Graphics.Animations
         private void OnValidate()
         {
             _animator ??= GetComponent<Animator>();
-            _velocityProvider ??= GetComponent<Vector3Adapter>();
+            _velocityProvider ??= GetComponent<Vector3Provider>();
         }
 
         #endregion
 
         private void FixedUpdate()
         {
-            float speed = _velocityProvider.value.magnitude;
+            float speed = _velocityProvider.vector.magnitude;
             float normalizedSpeed = Mathf.InverseLerp(_minSpeed, _maxSpeed, speed);
             _animator.SetFloat(_speedParameterName, normalizedSpeed);
         }
