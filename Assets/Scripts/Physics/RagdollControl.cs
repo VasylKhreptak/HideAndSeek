@@ -9,8 +9,11 @@ namespace Physics
         [SerializeField] private Transform _root;
 
         [Header("Preferences")]
+        [SerializeField] private bool _initialState;
         [SerializeField] private Rigidbody[] _rigidbodies;
         [SerializeField] private Collider[] _colliders;
+
+        #region MonoBehaviour
 
         private void OnValidate()
         {
@@ -21,6 +24,13 @@ namespace Physics
             _rigidbodies = _root.GetComponentsInChildren<Rigidbody>();
             _colliders = _root.GetComponentsInChildren<Collider>();
         }
+
+        private void Awake()
+        {
+            SetActive(_initialState);
+        }
+
+        #endregion
 
         public void SetActive(bool state)
         {
