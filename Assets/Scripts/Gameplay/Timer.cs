@@ -17,6 +17,7 @@ namespace Gameplay
         public event Action<int> onValueChanged;
         public event Action onElapsed;
         public event Action<int> onStoped;
+        public event Action onReset;
 
         public void StartTimer(int seconds)
         {
@@ -31,6 +32,7 @@ namespace Gameplay
             StartTimerRoutine();
 
             onStarted?.Invoke(_seconds);
+            onValueChanged?.Invoke(_seconds);
         }
 
         public void StopTimer()
@@ -44,6 +46,13 @@ namespace Gameplay
             StopTimerRoutine();
 
             onStoped?.Invoke(_seconds);
+        }
+
+        public void ResetTimer()
+        {
+            StopTimer();
+            _seconds = 0;
+            onReset?.Invoke();
         }
 
         private void StartTimerRoutine()
@@ -85,7 +94,7 @@ namespace Gameplay
                 _seconds--;
 
                 onValueChanged?.Invoke(_seconds);
-                
+
                 if (_seconds == 0)
                 {
                     Stop();
