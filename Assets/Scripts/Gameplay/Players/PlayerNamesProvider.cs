@@ -15,6 +15,8 @@ namespace Gameplay.Players
 
         private void Awake()
         {
+            if (_names == null) return;
+
             Reset();
         }
 
