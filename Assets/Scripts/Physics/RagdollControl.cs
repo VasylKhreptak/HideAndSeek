@@ -6,7 +6,7 @@ namespace Physics
     public class RagdollControl : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private Transform _root;
+        [SerializeField] private UnityEngine.Transform _root;
 
         [Header("Preferences")]
         [SerializeField] private bool _initialState;
@@ -17,7 +17,7 @@ namespace Physics
 
         private void OnValidate()
         {
-            _root ??= GetComponent<Transform>();
+            _root ??= GetComponent<UnityEngine.Transform>();
 
             if (_root == null) return;
 

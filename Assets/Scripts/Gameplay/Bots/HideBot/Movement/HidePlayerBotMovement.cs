@@ -56,6 +56,7 @@ namespace Gameplay.Bots.HideBot.Movement
         private void OnDisable()
         {
             StopRandomMovement();
+            StopEscaping();
 
             _seekEnteredEvent.onMonoCall -= OnSeekEntered;
             _seekExitedEvent.onMonoCall -= OnSeekExited;
@@ -67,16 +68,12 @@ namespace Gameplay.Bots.HideBot.Movement
         {
             StopRandomMovement();
             StartEscaping();
-        
-            Debug.Log("Seek Entered");
         }
 
         private void OnSeekExited()
         {
             StartRandomMovement();
             StopEscaping();
-        
-            Debug.Log("Seek Exited");
         }
 
         private void StartRandomMovement()
