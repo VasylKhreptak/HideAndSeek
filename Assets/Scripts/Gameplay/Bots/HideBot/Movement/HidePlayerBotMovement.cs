@@ -12,8 +12,8 @@ namespace Gameplay.Bots.HideBot.Movement
     public class HidePlayerBotMovement : MonoBehaviour
     {
         [Header("References")]
+        [SerializeField] private Transform _transform;
         [SerializeField] private NavMeshAgent _agent;
-        [SerializeField] private Transform _seekTransform;
 
         [Header("Default Target Transforms")]
         [SerializeField] private Transform[] _transforms;
@@ -42,6 +42,7 @@ namespace Gameplay.Bots.HideBot.Movement
 
         private void OnValidate()
         {
+            _transform ??= GetComponent<Transform>();
             _agent ??= GetComponent<NavMeshAgent>();
         }
 
@@ -131,15 +132,10 @@ namespace Gameplay.Bots.HideBot.Movement
         {
             while (true)
             {
-                _agent.SetDestination(GetEscapePosition());
+                _agent.SetDestination(TargetPosition);
 
                 yield return new WaitForSeconds(EscapeTargetSearchDelay);
             }
-        }
-
-        private Vector3 GetEscapePosition()
-        {
-            return _seekTransform.FarthestTransform(_transforms).position;
         }
     }
 }

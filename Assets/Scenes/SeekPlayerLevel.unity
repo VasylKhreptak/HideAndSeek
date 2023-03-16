@@ -1655,8 +1655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3931699ae61f3d4f851b66b9c02bd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transform: {fileID: 140224854}
   _agent: {fileID: 140224860}
-  _seekTransform: {fileID: 469596829}
   _transforms:
   - {fileID: 1316328479}
   - {fileID: 640845756}
@@ -4268,8 +4268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 389623928}
   _target: {fileID: 469596829}
-  _range: 10
-  _checkInterval: 1
+  _range: 20
+  _checkInterval: 0.3
 --- !u!1 &400268554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5140,6 +5140,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 469596830, guid: 5bde3d7616644bb40a5debc18f1f9c4a, type: 3}
+      propertyPath: _maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 469596833, guid: 5bde3d7616644bb40a5debc18f1f9c4a, type: 3}
       propertyPath: _onDragEvent
       value: 
@@ -5454,6 +5458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191449454283309348, guid: 5bde3d7616644bb40a5debc18f1f9c4a,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5467450759659572518, guid: 5bde3d7616644bb40a5debc18f1f9c4a,
         type: 3}
@@ -6295,8 +6304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3931699ae61f3d4f851b66b9c02bd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transform: {fileID: 566696054}
   _agent: {fileID: 566696060}
-  _seekTransform: {fileID: 469596829}
   _transforms:
   - {fileID: 1316328479}
   - {fileID: 640845756}
@@ -7661,8 +7670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 662799124}
   _target: {fileID: 469596829}
-  _range: 10
-  _checkInterval: 1
+  _range: 20
+  _checkInterval: 0.3
 --- !u!1 &665814878
 GameObject:
   m_ObjectHideFlags: 0
@@ -8760,8 +8769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 813056963}
   _target: {fileID: 469596829}
-  _range: 10
-  _checkInterval: 1
+  _range: 20
+  _checkInterval: 0.3
 --- !u!1 &828353994
 GameObject:
   m_ObjectHideFlags: 0
@@ -13196,8 +13205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 1239068868}
   _target: {fileID: 469596829}
-  _range: 10
-  _checkInterval: 1
+  _range: 20
+  _checkInterval: 0.3
 --- !u!1 &1239663519
 GameObject:
   m_ObjectHideFlags: 0
@@ -16199,8 +16208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3931699ae61f3d4f851b66b9c02bd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transform: {fileID: 1536024079}
   _agent: {fileID: 1536024085}
-  _seekTransform: {fileID: 469596829}
   _transforms:
   - {fileID: 1316328479}
   - {fileID: 640845756}
@@ -17568,8 +17577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3931699ae61f3d4f851b66b9c02bd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transform: {fileID: 1670981167}
   _agent: {fileID: 1670981173}
-  _seekTransform: {fileID: 469596829}
   _transforms:
   - {fileID: 1316328479}
   - {fileID: 640845756}
@@ -19473,7 +19482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a09388e18cfa2d408733daa45e1eaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDisableTime: 5
+  _movementDisableTime: 8
   _disableMovementAction: {fileID: 1922257846}
   _enableMovementAction: {fileID: 1922257845}
 --- !u!114 &1922257845
@@ -19668,8 +19677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 1937475050}
   _target: {fileID: 469596829}
-  _range: 10
-  _checkInterval: 1
+  _range: 20
+  _checkInterval: 0.3
 --- !u!1 &1942362078
 GameObject:
   m_ObjectHideFlags: 0
@@ -20728,7 +20737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52424b5485d74f040bf98bc1bcaa137e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allowedTime: 150
+  _allowedTime: 60
   _startFrom: {fileID: 1922257844}
   _cancelEvent: {fileID: 1906208115}
 --- !u!1001 &2057832050
@@ -24994,8 +25003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3931699ae61f3d4f851b66b9c02bd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transform: {fileID: 5238283468353048133}
   _agent: {fileID: 7162138362032474733}
-  _seekTransform: {fileID: 469596829}
   _transforms:
   - {fileID: 1316328479}
   - {fileID: 640845756}
