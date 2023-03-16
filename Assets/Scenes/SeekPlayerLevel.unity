@@ -1594,6 +1594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140224854}
+  - component: {fileID: 140224861}
   - component: {fileID: 140224860}
   - component: {fileID: 140224855}
   - component: {fileID: 140224859}
@@ -1752,6 +1753,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &140224861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140224853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f300ef8bf9b1313478742ba3231515c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killableObject: {fileID: 140224855}
 --- !u!1 &157149384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,6 +6257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566696054}
+  - component: {fileID: 566696061}
   - component: {fileID: 566696060}
   - component: {fileID: 566696055}
   - component: {fileID: 566696059}
@@ -6401,6 +6416,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &566696061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566696053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f300ef8bf9b1313478742ba3231515c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killableObject: {fileID: 566696055}
 --- !u!1 &568912093
 GameObject:
   m_ObjectHideFlags: 0
@@ -16147,6 +16175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1536024079}
+  - component: {fileID: 1536024086}
   - component: {fileID: 1536024085}
   - component: {fileID: 1536024080}
   - component: {fileID: 1536024084}
@@ -16305,6 +16334,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &1536024086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536024078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f300ef8bf9b1313478742ba3231515c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killableObject: {fileID: 1536024080}
 --- !u!1 &1539996531
 GameObject:
   m_ObjectHideFlags: 0
@@ -17516,6 +17558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1670981167}
+  - component: {fileID: 1670981174}
   - component: {fileID: 1670981173}
   - component: {fileID: 1670981168}
   - component: {fileID: 1670981172}
@@ -17674,6 +17717,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &1670981174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670981166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f300ef8bf9b1313478742ba3231515c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killableObject: {fileID: 1670981168}
 --- !u!1 &1673630137
 GameObject:
   m_ObjectHideFlags: 0
@@ -19482,7 +19538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a09388e18cfa2d408733daa45e1eaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDisableTime: 8
+  _movementDisableTime: 10
   _disableMovementAction: {fileID: 1922257846}
   _enableMovementAction: {fileID: 1922257845}
 --- !u!114 &1922257845
@@ -23479,6 +23535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5238283468353048133}
+  - component: {fileID: 7162138362032474739}
   - component: {fileID: 7162138362032474733}
   - component: {fileID: 7162138362032474734}
   - component: {fileID: 7162138362032474735}
@@ -25028,6 +25085,19 @@ MonoBehaviour:
   _maxEscapeTargetSearchDelay: 4
   _seekEnteredEvent: {fileID: 1841039362}
   _seekExitedEvent: {fileID: 1305136897}
+--- !u!114 &7162138362032474739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4898174368884741375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f300ef8bf9b1313478742ba3231515c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killableObject: {fileID: 7162138362032474734}
 --- !u!137 &7183275838943476946
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
