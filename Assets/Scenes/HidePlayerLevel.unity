@@ -1230,6 +1230,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1589189690781553181}
+    - target: {fileID: 2568402036883995246, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _botMovement
+      value: 
+      objectReference: {fileID: 5776340184637906193}
     - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _seekPlayerTransform
@@ -3933,6 +3938,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 799940194}
+  - {fileID: 1259023335}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4064,6 +4070,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1589189690781553181}
+    - target: {fileID: 2568402036883995246, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _botMovement
+      value: 
+      objectReference: {fileID: 5776340184637906193}
     - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _seekPlayerTransform
@@ -4389,6 +4400,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1589189690781553181}
+    - target: {fileID: 2568402036883995246, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _botMovement
+      value: 
+      objectReference: {fileID: 5776340184637906193}
     - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _seekPlayerTransform
@@ -4641,6 +4657,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256741238}
   m_CullTransparentMesh: 1
+--- !u!1 &1259023334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259023335}
+  - component: {fileID: 1259023337}
+  - component: {fileID: 1259023336}
+  m_Layer: 0
+  m_Name: StopTimerOnLevelEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259023335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259023334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130324187}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259023336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259023334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7461fe4040ec4d4bae3a2d36d2689a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1259023337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259023334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9982913fa1d369d43a008b96e73e17cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _listenerType: 0
+  _addListenerEvent: {fileID: 0}
+  _removeListenerEvent: {fileID: 0}
+  _monoEvent: {fileID: 761193710}
+  _action: {fileID: 1259023336}
 --- !u!1 &1305465454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6355,6 +6433,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1589189690781553181}
+    - target: {fileID: 2568402036883995246, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _botMovement
+      value: 
+      objectReference: {fileID: 5776340184637906193}
     - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _seekPlayerTransform
@@ -7732,6 +7815,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1589189690781553181}
+    - target: {fileID: 2568402036883995246, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _botMovement
+      value: 
+      objectReference: {fileID: 5776340184637906193}
     - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _seekPlayerTransform
@@ -10042,7 +10130,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 500

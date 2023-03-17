@@ -12,15 +12,6 @@ namespace Actions
         [Header("Preferences")]
         [SerializeField] private Transform _target;
 
-        #region MonoBehaviour
-
-        private void OnValidate()
-        {
-            _botMovement ??= FindObjectOfType<SeekPlayerBotMovement>();
-        }
-
-        #endregion
-
         public override void Do()
         {
             _botMovement.RemoveTarget(_target);
