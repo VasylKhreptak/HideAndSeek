@@ -14,8 +14,8 @@ TagManager:
   - HidePlayer
   - Ceiling
   - IgnoreNavMeshBake
-  - 
-  - 
+  - HidePlayerBot
+  - InspectingArea
   - 
   - 
   - 

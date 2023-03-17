@@ -74,6 +74,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transform: {fileID: 231508039263898461}
-  _pool: 2
+  _pool: 3
   _range: 2.5
   _randomizeYRotation: 1

@@ -4,6 +4,7 @@ namespace Plugins.ObjectPooler
     {
         LeftFootprint = 0,
         RightFootprint = 1,
-        Coin = 2,
+        CoinForSeekPlayer = 2,
+        CoinForHidePlayer = 3,
     }
 }

@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6847884401274298135}
   - component: {fileID: 5975977112734641579}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: CoinForSeekPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
