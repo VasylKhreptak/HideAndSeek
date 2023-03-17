@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SeekPlayerLevel.unity
     guid: 60c4c74fedd51df4d8aff88d2060e94d
+  - enabled: 1
+    path: Assets/Scenes/HidePlayerLevel.unity
+    guid: df73c1d3daa8b404c89088806dafb32c
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 53a7a517827f5a24c90bb4ccf5873bfa, type: 2}
