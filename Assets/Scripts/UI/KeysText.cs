@@ -1,3 +1,4 @@
+using System;
 using Economy;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,11 @@ namespace UI
         private void OnValidate()
         {
             _tmp ??= GetComponent<TMP_Text>();
+        }
+
+        private void Start()
+        {
+            UpdateText(_keysBank.Value);
         }
 
         private void Awake()
