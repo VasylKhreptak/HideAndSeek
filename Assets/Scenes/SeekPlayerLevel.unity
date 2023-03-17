@@ -1426,6 +1426,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 469596829}
+    - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _seekPlayerTransform
+      value: 
+      objectReference: {fileID: 469596829}
     - target: {fileID: 2779621246085561545, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: m_Name
@@ -3521,6 +3526,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 469596829}
+    - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _seekPlayerTransform
+      value: 
+      objectReference: {fileID: 469596829}
     - target: {fileID: 2779621246085561545, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: m_Name
@@ -3735,6 +3745,11 @@ PrefabInstance:
     - target: {fileID: 2054562477885280582, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _target
+      value: 
+      objectReference: {fileID: 469596829}
+    - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _seekPlayerTransform
       value: 
       objectReference: {fileID: 469596829}
     - target: {fileID: 2779621246085561545, guid: 62b8a62424964d54086287c493fcc49f,
@@ -5578,6 +5593,11 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 469596829}
+    - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _seekPlayerTransform
+      value: 
+      objectReference: {fileID: 469596829}
     - target: {fileID: 2779621246085561545, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: m_Name
@@ -6523,6 +6543,11 @@ PrefabInstance:
     - target: {fileID: 2054562477885280582, guid: 62b8a62424964d54086287c493fcc49f,
         type: 3}
       propertyPath: _target
+      value: 
+      objectReference: {fileID: 469596829}
+    - target: {fileID: 2655275780649685350, guid: 62b8a62424964d54086287c493fcc49f,
+        type: 3}
+      propertyPath: _seekPlayerTransform
       value: 
       objectReference: {fileID: 469596829}
     - target: {fileID: 2779621246085561545, guid: 62b8a62424964d54086287c493fcc49f,

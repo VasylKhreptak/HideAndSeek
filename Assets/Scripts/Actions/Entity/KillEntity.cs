@@ -12,8 +12,6 @@ namespace Actions.Entity
         public override void Do()
         {
             _killableObject.Kill();
-            
-            Debug.Log("Killed Object");
         }
     }
 }
