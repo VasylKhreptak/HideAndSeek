@@ -16,10 +16,22 @@ namespace Gameplay.Players.Movement
 
         private Joystick _joystick;
 
+        public float Speed => _maxSpeed;
+
         [Inject]
         private void Construct(Joystick joystick)
         {
             _joystick = joystick;
+        }
+
+        public void SetSpeed(float speed)
+        {
+            if (speed < 0f)
+            {
+                speed = 0;
+            }
+
+            _maxSpeed = speed;
         }
 
         #region MonoBehaviour
@@ -38,7 +50,7 @@ namespace Gameplay.Players.Movement
             Vector3 direction = new Vector3(horizontal, 0f, vertical);
             direction = Vector3.ClampMagnitude(direction, 1f);
             direction = _transform.rotation * direction;
-            
+
             _rigidbody.AddForce(direction * _force, _forceMode);
             _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, _maxSpeed);
         }
