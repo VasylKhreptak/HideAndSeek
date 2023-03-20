@@ -4,7 +4,7 @@ using UniRx;
 using UnityEngine;
 using Action = CBA.Actions.Core.Action;
 
-namespace Boosters
+namespace Boosters.HidePlayer
 {
     public class GhostBooster : Action
     {
