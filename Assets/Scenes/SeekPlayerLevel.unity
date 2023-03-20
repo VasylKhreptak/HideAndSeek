@@ -772,12 +772,12 @@ GameObject:
   m_Component:
   - component: {fileID: 193107277}
   m_Layer: 5
-  m_Name: GhostBooster
+  m_Name: SeeThroughtWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &193107277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -795,9 +795,9 @@ RectTransform:
   m_Father: {fileID: 84505177}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -101.63733}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &242372555
@@ -4470,7 +4470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b26021b52472864cbb3b28210a3b0e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86cb5c70a3685894e9286b336812a02c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6957,15 +6957,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691053722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f977b70a02ab774ca6260cc3e03456f, type: 3}
+  m_Script: {fileID: 11500000, guid: b35b4f2df7aa44c41844399171f43af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  _wallLayerMask:
-    serializedVersion: 2
-    m_Bits: 2048
+  _playerHiddenFeature: {fileID: 5234774855456600779, guid: 93212f5751162a84db2ca234303ab390,
+    type: 2}
   _duration: 3
 --- !u!1 &1695640883
 GameObject:
