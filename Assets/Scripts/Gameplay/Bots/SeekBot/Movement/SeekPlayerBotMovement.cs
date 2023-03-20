@@ -52,6 +52,13 @@ namespace Gameplay.Bots.SeekBot.Movement
             StopMovement();
         }
 
+        public void AddTarget(Transform target)
+        {
+            _targets.Add(target);
+
+            UpdateTarget();
+        }
+
         public void RemoveTarget(Transform target)
         {
             _targets.Remove(target);
