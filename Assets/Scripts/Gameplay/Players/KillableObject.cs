@@ -8,9 +8,15 @@ namespace Gameplay.Players
     {
         public event Action onKilled;
 
+        private bool _isKilled;
+
+        public bool IsKilled => _isKilled;
+
         public void Kill()
         {
             Invoke();
+
+            _isKilled = true;
         }
     }
 }
