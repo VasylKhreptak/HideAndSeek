@@ -3541,7 +3541,7 @@ MonoBehaviour:
   _wallLayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  _duration: 3
+  _duration: 1
 --- !u!1 &781747117
 GameObject:
   m_ObjectHideFlags: 0
