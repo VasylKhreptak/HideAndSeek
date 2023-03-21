@@ -75,6 +75,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 86cb5c70a3685894e9286b336812a02c, type: 3}
     - {fileID: 2800000, guid: 87bd4b94b5e66f44494866b004147f1f, type: 3}
     - {fileID: 2800000, guid: 5c9ce0828d2a943498b8eae86e93f569, type: 3}
+    - {fileID: 2800000, guid: eef4af26a93c29442bc581b2e26a17a9, type: 3}
+    - {fileID: 2800000, guid: 4edc7a0281f62c747b409f27790b7fa1, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -85,12 +87,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4db8da21e8ae76e438478496b6bd5d3e, type: 3}
   - {fileID: 21300000, guid: 8a98f661c1d858245bbae4a4fa2f01e0, type: 3}
   - {fileID: 21300000, guid: aedb8dc1772073e42ab7f172b0218957, type: 3}
+  - {fileID: 21300000, guid: 4edc7a0281f62c747b409f27790b7fa1, type: 3}
   - {fileID: 21300000, guid: 5c9ce0828d2a943498b8eae86e93f569, type: 3}
   - {fileID: 21300000, guid: 435f9a136e4a6274bb52dd76be93f25e, type: 3}
   - {fileID: 21300000, guid: 9622cb933c7be8e4586f78ceabe1471e, type: 3}
   - {fileID: 21300000, guid: 87bd4b94b5e66f44494866b004147f1f, type: 3}
   - {fileID: 21300000, guid: f05609e457813004ebe8859dcb13cf33, type: 3}
   - {fileID: 21300000, guid: 238ff22534e2db648b2be419f7ed35db, type: 3}
+  - {fileID: 21300000, guid: eef4af26a93c29442bc581b2e26a17a9, type: 3}
   - {fileID: 21300000, guid: 78fe129693725f349b6a212f9293b3c2, type: 3}
   - {fileID: 21300000, guid: 8acf0c07aebeea6429c7d6de38e896c6, type: 3}
   - {fileID: 21300000, guid: 4cabd5c7f9264574e9a99b3521279bc5, type: 3}
@@ -117,12 +121,14 @@ SpriteAtlas:
   - RedHidePlayer
   - CheckIcon
   - OldPaperFrame2
+  - Circle
   - RangeAttackBoostIcon
   - ShopIcon
   - SpeedUpPower-up
   - FreezePlayersBoost
   - CoinIcon
   - LightBlueHidePlayer
+  - Triangle
   - LevelBackground
   - YellowHidePlayer
   - CompletedText
