@@ -43,7 +43,7 @@ namespace Boosters.HidePlayer
 
         public override void Do()
         {
-            _waitDisposable?.Dispose();
+            DisposeDelay();
             BecameInvisible();
             _waitDisposable = Observable.Timer(TimeSpan.FromSeconds(_duration)).Subscribe(_ => BecameVisible());
         }
