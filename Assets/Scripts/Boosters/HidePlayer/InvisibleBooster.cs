@@ -60,7 +60,7 @@ namespace Boosters.HidePlayer
 
         private void DisposeDelay()
         {
-            _waitDisposable.Dispose();
+            _waitDisposable?.Dispose();
         }
     }
 }
