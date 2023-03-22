@@ -9,11 +9,11 @@ namespace Gameplay.HidePlayer
         [Header("References")]
         [SerializeField] private KeySign _keySign;
 
-        private ReactiveProperty<bool> _hasKey;
+        private ReactiveProperty<bool> _hasKeyProperty = new ReactiveProperty<bool>();
 
-        public IReadOnlyReactiveProperty<bool> HasKeyProperty => _hasKey;
+        public IReadOnlyReactiveProperty<bool> HasKeyProperty => _hasKeyProperty;
 
-        public bool HasKey => _hasKey.Value;
+        public bool HasKey => _hasKeyProperty.Value;
 
         #region MonoBehaviour
 
@@ -26,9 +26,9 @@ namespace Gameplay.HidePlayer
 
         public void PlaceKey()
         {
-            if (_hasKey.Value == false)
+            if (_hasKeyProperty.Value == false)
             {
-                _hasKey.Value = true;
+                _hasKeyProperty.Value = true;
                 _keySign.SetState(true);
             }
         }
