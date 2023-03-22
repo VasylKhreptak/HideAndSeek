@@ -1,4 +1,5 @@
 using UI;
+using UniRx;
 using UnityEngine;
 
 namespace Gameplay.HidePlayer
@@ -8,10 +9,12 @@ namespace Gameplay.HidePlayer
         [Header("References")]
         [SerializeField] private KeySign _keySign;
 
-        private bool _hasKey;
+        private ReactiveProperty<bool> _hasKey;
 
-        public bool HasKey => _hasKey;
-        
+        public IReadOnlyReactiveProperty<bool> HasKeyProperty => _hasKey;
+
+        public bool HasKey => _hasKey.Value;
+
         #region MonoBehaviour
 
         private void OnValidate()
@@ -23,9 +26,9 @@ namespace Gameplay.HidePlayer
 
         public void PlaceKey()
         {
-            if (_hasKey == false)
+            if (_hasKey.Value == false)
             {
-                _hasKey = true;
+                _hasKey.Value = true;
                 _keySign.SetState(true);
             }
         }
