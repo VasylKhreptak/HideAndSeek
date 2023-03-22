@@ -1706,7 +1706,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0, g: 0.90129423, b: 1, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &359837886
 GameObject:
@@ -6476,7 +6476,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0, g: 1, b: 0.008134127, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!43 &1225037211
 Mesh:
@@ -8272,7 +8272,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0.07092619, g: 0, b: 1, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &1649455312
 GameObject:
@@ -8323,7 +8323,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0.9435899, g: 1, b: 0, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &1649470906
 GameObject:
@@ -9868,7 +9868,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 1, g: 0, b: 0, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &1947426577
 GameObject:

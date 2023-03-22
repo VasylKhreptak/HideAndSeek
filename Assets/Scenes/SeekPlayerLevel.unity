@@ -560,7 +560,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0, g: 1, b: 0.008134127, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &92243385
 GameObject:
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0.9435899, g: 1, b: 0, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &761193708
 GameObject:
@@ -4853,7 +4853,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0, g: 0.90129423, b: 1, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &1039293672
 GameObject:
@@ -7544,7 +7544,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 0.07092619, g: 0, b: 1, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!1 &1582023445
 GameObject:
@@ -7595,7 +7595,7 @@ MonoBehaviour:
   _footprint: 4
   _color: {r: 1, g: 0, b: 0, a: 1}
   _spawnInterval: 0.2
-  _minSpeed: 3
+  _minSpeed: 2
   _speedCheckInterval: 0.2
 --- !u!114 &1582870823 stripped
 MonoBehaviour:
