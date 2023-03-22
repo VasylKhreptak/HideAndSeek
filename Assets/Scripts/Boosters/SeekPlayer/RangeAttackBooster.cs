@@ -8,7 +8,7 @@ namespace Boosters.SeekPlayer
     public class RangeAttackBooster : Action
     {
         [Header("References")]
-        [SerializeField] private CapsuleCollider _attackZone;
+        [SerializeField] private SphereCollider _attackZone;
 
         [Header("Preferences")]
         [SerializeField] private float _duration;
