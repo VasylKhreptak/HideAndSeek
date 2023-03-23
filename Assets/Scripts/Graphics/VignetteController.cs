@@ -3,77 +3,80 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class VignetteController : MonoBehaviour
+namespace Graphics
 {
-    [Header("References")]
-    [SerializeField] private Volume _volume;
-    [SerializeField] private Transform _seekPlayerTransform;
-    [SerializeField] private Transform _hidePlayerTransform;
-
-    [Header("Distance Preferences")]
-    [SerializeField] private float _minPlayerDistance;
-    [SerializeField] private float _maxPlayerDistance;
-
-    [Header("Intensity Preferences")]
-    [SerializeField, Range(0f, 1f)] private float _minIntensity;
-    [SerializeField, Range(0f, 1f)] private float _maxIntensity;
-
-    [Header("Color Preferences")]
-    [SerializeField] private Color _startColor;
-    [SerializeField] private Color _targetColor;
-
-    [Header("General Preferences")]
-    [SerializeField] private AnimationCurve _curve;
-
-    private Vignette _vignette;
-
-    #region MonoBehaviour
-
-    private void OnValidate()
+    public class VignetteController : MonoBehaviour
     {
-        _volume ??= FindObjectOfType<Volume>();
-    }
+        [Header("References")]
+        [SerializeField] private Volume _volume;
+        [SerializeField] private Transform _seekPlayerTransform;
+        [SerializeField] private Transform _hidePlayerTransform;
 
-    private void Awake()
-    {
-        _volume.profile.TryGet(out _vignette);
-    }
+        [Header("Distance Preferences")]
+        [SerializeField] private float _minPlayerDistance;
+        [SerializeField] private float _maxPlayerDistance;
 
-    private void Update()
-    {
-        UpdateVignette();
-    }
+        [Header("Intensity Preferences")]
+        [SerializeField, Range(0f, 1f)] private float _minIntensity;
+        [SerializeField, Range(0f, 1f)] private float _maxIntensity;
 
-    #endregion
+        [Header("Color Preferences")]
+        [SerializeField] private Color _startColor;
+        [SerializeField] private Color _targetColor;
 
-    private void UpdateVignette()
-    {
-        float distance = Vector3.Distance(_hidePlayerTransform.position, _seekPlayerTransform.position);
+        [Header("General Preferences")]
+        [SerializeField] private AnimationCurve _curve;
 
-        _vignette.intensity.value = GetIntensity(distance);
-        _vignette.color.value = GetColor();
-    }
+        private Vignette _vignette;
 
-    private float GetIntensity(float distance)
-    {
-        return _curve.Evaluate(_minPlayerDistance, _maxPlayerDistance, distance, _maxIntensity, _minIntensity);
-    }
+        #region MonoBehaviour
 
-    private Color GetColor()
-    {
-        return Color.Lerp(_startColor, _targetColor, _vignette.intensity.value);
-    }
+        private void OnValidate()
+        {
+            _volume ??= FindObjectOfType<Volume>();
+        }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (_hidePlayerTransform == null) return;
+        private void Awake()
+        {
+            _volume.profile.TryGet(out _vignette);
+        }
 
-        Gizmos.color = CBA.Extensions.Color.WithAlpha(Color.green, 0.4f);
-        Vector3 position = _hidePlayerTransform.position;
+        private void Update()
+        {
+            UpdateVignette();
+        }
 
-        Gizmos.DrawSphere(position, _minPlayerDistance);
+        #endregion
 
-        Gizmos.color = CBA.Extensions.Color.WithAlpha(Color.red, 0.4f);
-        Gizmos.DrawSphere(position, _maxPlayerDistance);
+        private void UpdateVignette()
+        {
+            float distance = Vector3.Distance(_hidePlayerTransform.position, _seekPlayerTransform.position);
+
+            _vignette.intensity.value = GetIntensity(distance);
+            _vignette.color.value = GetColor();
+        }
+
+        private float GetIntensity(float distance)
+        {
+            return _curve.Evaluate(_minPlayerDistance, _maxPlayerDistance, distance, _maxIntensity, _minIntensity);
+        }
+
+        private Color GetColor()
+        {
+            return Color.Lerp(_startColor, _targetColor, _vignette.intensity.value);
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (_hidePlayerTransform == null) return;
+
+            Gizmos.color = CBA.Extensions.Color.WithAlpha(Color.green, 0.4f);
+            Vector3 position = _hidePlayerTransform.position;
+
+            Gizmos.DrawSphere(position, _minPlayerDistance);
+
+            Gizmos.color = CBA.Extensions.Color.WithAlpha(Color.red, 0.4f);
+            Gizmos.DrawSphere(position, _maxPlayerDistance);
+        }
     }
 }
