@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackZone: {fileID: 190342763}
   _duration: 3
-  _targetRange: 1.4
+  _targetRange: 1.2
 --- !u!1 &184009293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 190342765}
   - component: {fileID: 190342764}
   m_Layer: 13
-  m_Name: PunchAnimation
+  m_Name: AttackZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,8 +1111,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: -0.5}
 --- !u!114 &190342764
 MonoBehaviour:
   m_ObjectHideFlags: 0
