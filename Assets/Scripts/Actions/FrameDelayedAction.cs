@@ -10,6 +10,8 @@ namespace Actions
         [Header("References")]
         [SerializeField] private Action _action;
 
+        private IDisposable _disposable;
+
         #region MonoBehaviour
 
         private void OnValidate()
@@ -21,12 +23,12 @@ namespace Actions
 
         public override void Do()
         {
-            IDisposable disposable = Observable.NextFrame().Subscribe(_ =>
+            _disposable?.Dispose();
+
+            _disposable = Observable.NextFrame().Subscribe(_ =>
             {
                 _action.Do();
             });
-
-            disposable.Dispose();
         }
     }
 }
