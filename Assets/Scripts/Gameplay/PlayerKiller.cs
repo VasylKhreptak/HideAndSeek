@@ -1,8 +1,6 @@
-using System.Diagnostics;
 using CBA.Events.Physics._3D;
 using Interfaces.Entity;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 namespace Gameplay
 {
@@ -34,15 +32,11 @@ namespace Gameplay
 
         public void KillPlayer()
         {
-            //Debug.Log("Current Player == null: " + (_currentPlayer == null));
-
             if (_currentPlayer == null) return;
 
             if (_currentPlayer.TryGetComponent(out IKillable killable))
             {
                 killable.Kill();
-
-                //Debug.Log("Has Killable Object");
             }
         }
     }

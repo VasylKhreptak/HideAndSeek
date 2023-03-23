@@ -14,6 +14,8 @@ namespace Gameplay.Players
 
         public void Kill()
         {
+            if (_isKilled) return;
+
             Invoke();
 
             _isKilled = true;
