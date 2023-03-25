@@ -26,7 +26,6 @@ namespace Gameplay
 
             if (hitPoints.Count == 0)
             {
-                Debug.Log("No hit points found");
                 return targetPosition;
             }
 
@@ -42,7 +41,7 @@ namespace Gameplay
                     appropriatePointIndex = i;
                 }
             }
-            
+
             float pointDistance = Mathf.Min(maxScanDistance, maxDistance);
             Vector3 appropriatePoint = hitPoints[appropriatePointIndex].point;
             Vector3 directionToPoint = (appropriatePoint - targetPosition).normalized;
