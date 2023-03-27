@@ -964,6 +964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3446483013485130064}
   - component: {fileID: 8733731878849162026}
+  - component: {fileID: 720915751}
   m_Layer: 5
   m_Name: MenuSeekPlayer1
   m_TagString: Untagged
@@ -1008,6 +1009,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &720915751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2638984753591790570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db29e543f62efa14ca01a9814a39c810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skinnedMeshRenderer: {fileID: 7853345451466351219}
 --- !u!1 &2751850617650003918
 GameObject:
   m_ObjectHideFlags: 0
