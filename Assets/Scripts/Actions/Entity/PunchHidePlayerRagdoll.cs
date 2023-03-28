@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Action = CBA.Actions.Core.Action;
 
@@ -8,22 +9,17 @@ namespace Actions.Entity
         [Header("References")]
         [SerializeField] private Transform _ragdollRoot;
         [SerializeField] private Transform _seekPlayerTransform;
+        [SerializeField] private HidePlayerRagdollController _ragdoll;
 
         [Header("Preferences")]
         [SerializeField] private float _force;
         [SerializeField] private ForceMode _forceMode;
-        [Space(20)]
-        [SerializeField] private Rigidbody[] _rigidbodies;
 
         #region MonoBehaviour
 
         private void OnValidate()
         {
-            _ragdollRoot ??= GetComponent<Transform>();
-
-            if (_ragdollRoot == null) return;
-
-            _rigidbodies = _ragdollRoot.GetComponentsInChildren<Rigidbody>();
+            _ragdoll ??= FindObjectOfType<HidePlayerRagdollController>();
         }
 
         #endregion
@@ -32,7 +28,7 @@ namespace Actions.Entity
         {
             Vector3 direction = GetPunchDirection();
 
-            foreach (var rigidbody in _rigidbodies)
+            foreach (var rigidbody in _ragdoll.GetRigidbodies())
             {
                 rigidbody.AddForce(direction * _force, _forceMode);
             }

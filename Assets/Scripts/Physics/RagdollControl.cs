@@ -9,7 +9,6 @@ namespace Physics
         [SerializeField] private UnityEngine.Transform _root;
 
         [Header("Preferences")]
-        [SerializeField] private bool _initialState;
         [SerializeField] private Rigidbody[] _rigidbodies;
         [SerializeField] private Collider[] _colliders;
 
@@ -25,11 +24,6 @@ namespace Physics
             _colliders = _root.GetComponentsInChildren<Collider>();
         }
 
-        private void Awake()
-        {
-            SetActive(_initialState);
-        }
-
         #endregion
 
         public void SetActive(bool state)
@@ -43,6 +37,11 @@ namespace Physics
             {
                 collider.enabled = state;
             }
+        }
+
+        public Rigidbody[] GetRigidbodies()
+        {
+            return (Rigidbody[])_rigidbodies.Clone();
         }
     }
 }
