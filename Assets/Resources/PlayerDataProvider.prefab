@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultPlayerData:
-    coins: 10000
+    coins: 100000
     keys: 0
     levels:
     - hidePlayerFinished: 0

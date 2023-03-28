@@ -17,3 +17,7 @@ MonoBehaviour:
     price: 3000
   - skin: 3
     price: 5000
+  - skin: 5
+    price: 4000
+  - skin: 4
+    price: 7000

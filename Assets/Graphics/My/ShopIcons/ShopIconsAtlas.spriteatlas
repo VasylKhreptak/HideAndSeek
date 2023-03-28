@@ -35,6 +35,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 1cd7ea8350323a040b2a337825dd820e, type: 3}
     - {fileID: 2800000, guid: 2822476c0dc54064bbdf14c6e4c2fa27, type: 3}
     - {fileID: 2800000, guid: 84127c10c5b131a45922f220b273c02f, type: 3}
+    - {fileID: 2800000, guid: e6424bfd53e8658449d4366c6ab045e6, type: 3}
+    - {fileID: 2800000, guid: c5f298c59f3763e4e866a42c8f328843, type: 3}
+    - {fileID: 2800000, guid: 67f2bd85143b8274489396ff0af1efe4, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -42,11 +45,17 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 84127c10c5b131a45922f220b273c02f, type: 3}
   - {fileID: 21300000, guid: 1cd7ea8350323a040b2a337825dd820e, type: 3}
+  - {fileID: 21300000, guid: 67f2bd85143b8274489396ff0af1efe4, type: 3}
+  - {fileID: 21300000, guid: c5f298c59f3763e4e866a42c8f328843, type: 3}
   - {fileID: 21300000, guid: 2822476c0dc54064bbdf14c6e4c2fa27, type: 3}
+  - {fileID: 21300000, guid: e6424bfd53e8658449d4366c6ab045e6, type: 3}
   m_PackedSpriteNamesToIndex:
   - ZombieGirlShopIcon
   - WhiteClownIcon
+  - DefaultBoyMenuItemIcon
+  - ExoGuyShopMenuItemIcon
   - NinjaIcon
+  - MusicGuyShopItemIcon
   m_RenderDataMap: {}
   m_Tag: ShopIconsAtlas
   m_IsVariant: 0
