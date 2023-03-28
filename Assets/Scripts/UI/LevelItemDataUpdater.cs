@@ -39,14 +39,24 @@ namespace UI
 
         private void UpdateUI(LevelData levelData)
         {
+            Debug.Log("Finished Hide Level: " + levelData.hidePlayerFinished);
+            Debug.Log("Finished Seek Level: " + levelData.seekPlayerFinished);
+            Debug.Log("Completion Sign: " + (levelData.hidePlayerFinished || levelData.seekPlayerFinished));
+
             if (levelData.hidePlayerFinished)
+            {
                 _enableHidePlayer.Do();
+            }
 
             if (levelData.seekPlayerFinished)
+            {
                 _enableSeekPlayer.Do();
+            }
 
             if (levelData.hidePlayerFinished || levelData.seekPlayerFinished)
+            {
                 _enableCompletionSign.Do();
+            }
         }
     }
 }
