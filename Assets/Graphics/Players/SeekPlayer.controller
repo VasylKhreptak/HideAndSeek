@@ -296,25 +296,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Punch
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dance
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Cry
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Idle
@@ -343,7 +343,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: HandsLayer
     m_StateMachine: {fileID: -5426211674837177103}
-    m_Mask: {fileID: 31900000, guid: 0745337ddc834cd41b541d1074cb8919, type: 2}
+    m_Mask: {fileID: 31900000, guid: 63421bf41d7742948b7dd847763b74d2, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
