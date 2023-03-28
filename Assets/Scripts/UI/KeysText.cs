@@ -29,10 +29,6 @@ namespace UI
         private void Start()
         {
             UpdateText(_keysBank.Value);
-        }
-
-        private void Awake()
-        {
             _keysBank.onValueChanged += UpdateText;
         }
 

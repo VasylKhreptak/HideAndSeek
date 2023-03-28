@@ -22,7 +22,13 @@ namespace Economy
         public override void Add(int value)
         {
             base.Add(value);
-            
+
+            _playerDataProvider.Data.keys = this.value;
+        }
+
+        protected override void OnValueChanged()
+        {
+            base.OnValueChanged();
             _playerDataProvider.Data.keys = this.value;
         }
     }

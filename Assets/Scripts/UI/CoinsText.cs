@@ -1,6 +1,7 @@
 using System;
 using Economy;
 using TMPro;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -29,10 +30,6 @@ namespace UI
         private void Start()
         {
             UpdateText(_coinsBank.Value);
-        }
-
-        private void Awake()
-        {
             _coinsBank.onValueChanged += UpdateText;
         }
 

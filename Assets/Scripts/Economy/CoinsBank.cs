@@ -1,5 +1,6 @@
 using Data;
 using Economy.Core;
+using NaughtyAttributes;
 using UnityEngine;
 using Zenject;
 
@@ -14,16 +15,22 @@ namespace Economy
         {
             _playerDataProvider = playerDataProvider;
         }
-        
+
         private void Start()
         {
             Add(_playerDataProvider.Data.coins);
         }
-        
+
         public override void Add(int value)
         {
             base.Add(value);
-            
+
+            _playerDataProvider.Data.coins = this.value;
+        }
+
+        protected override void OnValueChanged()
+        {
+            base.OnValueChanged();
             _playerDataProvider.Data.coins = this.value;
         }
     }

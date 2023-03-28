@@ -8,7 +8,7 @@ namespace Economy.Core
 
             this.value += value;
             onValueAdded?.Invoke(value);
-            onValueChanged?.Invoke(this.value);
+            OnValueChanged();
         }
 
         public override bool TrySpend(int value)
@@ -17,11 +17,21 @@ namespace Economy.Core
             {
                 this.value -= value;
                 onValueSpent?.Invoke(value);
-                onValueChanged?.Invoke(this.value);
+                OnValueChanged();
                 return true;
             }
 
             return false;
+        }
+
+        protected virtual void OnValueChanged()
+        {
+            onValueChanged?.Invoke(this.value);
+        }
+
+        public bool CanAfford(int value)
+        {
+            return this.value >= value;
         }
     }
 }

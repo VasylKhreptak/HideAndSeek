@@ -1,10 +1,19 @@
-using UnityEngine;
-
 namespace Skins
 {
-    public class Skin : ScriptableObject
+    public enum Skin
     {
-        public UnityEngine.Mesh mesh;
-        public UnityEngine.Material material;
+        #region HidePlayer
+
+        DefaultBoy = 0,
+
+        #endregion
+
+        #region SeekPlayer
+
+        Clown = 1,
+        Ninja = 2,
+        ZombieGirl = 3,
+
+        #endregion
     }
 }

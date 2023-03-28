@@ -2,12 +2,15 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class OnPointerMoveEvent : MonoBehaviour, IPointerMoveHandler
+namespace Events.Screen
 {
-    public event Action<PointerEventData> onPointerMoved;
-
-    public void OnPointerMove(PointerEventData eventData)
+    public class OnPointerMoveEvent : MonoBehaviour, IPointerMoveHandler
     {
-        onPointerMoved?.Invoke(eventData);
+        public event Action<PointerEventData> onPointerMoved;
+
+        public void OnPointerMove(PointerEventData eventData)
+        {
+            onPointerMoved?.Invoke(eventData);
+        }
     }
 }

@@ -2,12 +2,15 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class OnDragEvent : MonoBehaviour, IDragHandler
+namespace Events.Screen
 {
-    public event Action<PointerEventData> onDrag;
-
-    public void OnDrag(PointerEventData eventData)
+    public class OnDragEvent : MonoBehaviour, IDragHandler
     {
-        onDrag?.Invoke(eventData);
+        public event Action<PointerEventData> onDrag;
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            onDrag?.Invoke(eventData);
+        }
     }
 }

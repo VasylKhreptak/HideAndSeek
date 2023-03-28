@@ -45,8 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultPlayerData:
-    coins: 100
+    coins: 10000
     keys: 0
     levels:
     - hidePlayerFinished: 0
       seekPlayerFinished: 0
+    skinData:
+      boughtSkins:
+        _list: 0000000001000000
+      currentHideSkin:
+        value: 0
+      currentSeekSkin:
+        value: 1

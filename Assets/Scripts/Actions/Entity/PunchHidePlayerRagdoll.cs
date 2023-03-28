@@ -1,48 +1,49 @@
-using System;
-using UniRx;
 using UnityEngine;
 using Action = CBA.Actions.Core.Action;
 
-public class PunchHidePlayerRagdoll : Action
+namespace Actions.Entity
 {
-    [Header("References")]
-    [SerializeField] private Transform _ragdollRoot;
-    [SerializeField] private Transform _seekPlayerTransform;
-
-    [Header("Preferences")]
-    [SerializeField] private float _force;
-    [SerializeField] private ForceMode _forceMode;
-    [Space(20)]
-    [SerializeField] private Rigidbody[] _rigidbodies;
-
-    #region MonoBehaviour
-
-    private void OnValidate()
+    public class PunchHidePlayerRagdoll : Action
     {
-        _ragdollRoot ??= GetComponent<Transform>();
+        [Header("References")]
+        [SerializeField] private Transform _ragdollRoot;
+        [SerializeField] private Transform _seekPlayerTransform;
 
-        if (_ragdollRoot == null) return;
+        [Header("Preferences")]
+        [SerializeField] private float _force;
+        [SerializeField] private ForceMode _forceMode;
+        [Space(20)]
+        [SerializeField] private Rigidbody[] _rigidbodies;
 
-        _rigidbodies = _ragdollRoot.GetComponentsInChildren<Rigidbody>();
-    }
+        #region MonoBehaviour
 
-    #endregion
-
-    public override void Do()
-    {
-        Vector3 direction = GetPunchDirection();
-
-        foreach (var rigidbody in _rigidbodies)
+        private void OnValidate()
         {
-            rigidbody.AddForce(direction * _force, _forceMode);
-        }
-    }
+            _ragdollRoot ??= GetComponent<Transform>();
 
-    private Vector3 GetPunchDirection()
-    {
-        Vector3 start = _seekPlayerTransform.position;
-        Vector3 end = _ragdollRoot.position;
-        end.y = start.y;
-        return (end - start).normalized;
+            if (_ragdollRoot == null) return;
+
+            _rigidbodies = _ragdollRoot.GetComponentsInChildren<Rigidbody>();
+        }
+
+        #endregion
+
+        public override void Do()
+        {
+            Vector3 direction = GetPunchDirection();
+
+            foreach (var rigidbody in _rigidbodies)
+            {
+                rigidbody.AddForce(direction * _force, _forceMode);
+            }
+        }
+
+        private Vector3 GetPunchDirection()
+        {
+            Vector3 start = _seekPlayerTransform.position;
+            Vector3 end = _ragdollRoot.position;
+            end.y = start.y;
+            return (end - start).normalized;
+        }
     }
 }
