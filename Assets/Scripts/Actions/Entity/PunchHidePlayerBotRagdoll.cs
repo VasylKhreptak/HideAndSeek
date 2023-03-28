@@ -1,18 +1,18 @@
-using System;
+using Physics;
 using UnityEngine;
 
 namespace Actions.Entity
 {
-    public class PunchHidePlayerRagdoll : PunchRagdoll
+    public class PunchHidePlayerBotRagdoll : PunchRagdoll
     {
         [Header("References")]
-        [SerializeField] private HidePlayerRagdollController _ragdoll;
+        [SerializeField] private RagdollControl _ragdoll;
 
         #region MonoBehaviour
 
         private void OnValidate()
         {
-            _ragdoll ??= GetComponent<HidePlayerRagdollController>();
+            _ragdoll ??= GetComponent<RagdollControl>();
         }
 
         #endregion
