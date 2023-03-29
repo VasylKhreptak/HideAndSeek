@@ -73,5 +73,5 @@ MonoBehaviour:
       dopplerLevel: 1
       spread: 0
       rolloffMode: 1
-      minDistance: 1
-      maxDistance: 50
+      minDistance: 0.3
+      maxDistance: 5

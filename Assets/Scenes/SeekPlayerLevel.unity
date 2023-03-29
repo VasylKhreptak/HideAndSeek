@@ -36711,9 +36711,9 @@ MonoBehaviour:
     _audio3DSettings:
       dopplerLevel: 1
       spread: 0
-      rolloffMode: 0
+      rolloffMode: 1
       minDistance: 1
-      maxDistance: 500
+      maxDistance: 30
 --- !u!114 &5776340184637906197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36775,9 +36775,9 @@ MonoBehaviour:
     _audio3DSettings:
       dopplerLevel: 1
       spread: 0
-      rolloffMode: 0
+      rolloffMode: 1
       minDistance: 1
-      maxDistance: 500
+      maxDistance: 30
 --- !u!114 &5776340184637906199
 MonoBehaviour:
   m_ObjectHideFlags: 0
