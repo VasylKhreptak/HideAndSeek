@@ -17,7 +17,7 @@ namespace Gameplay.Players
             if (_isKilled) return;
 
             Invoke();
-
+            onKilled?.Invoke();
             _isKilled = true;
         }
     }
