@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2226257135335551412}
   - component: {fileID: 638476372750016638}
   - component: {fileID: -3510278803943825109}
+  - component: {fileID: 6079092316819652854}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -52,6 +53,7 @@ MonoBehaviour:
   - {fileID: -2226257135335551412}
   - {fileID: 638476372750016638}
   - {fileID: -3510278803943825109}
+  - {fileID: 6079092316819652854}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -107,4 +109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keyBankPrefab: {fileID: 7734870228280573067, guid: c03a6fc5c1a0a3648af160b209ab245f,
+    type: 3}
+--- !u!114 &6079092316819652854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662414779800547405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe6efb1cb1e52144a3a6c1258d117ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioPoolerPrefab: {fileID: 1154988787741706613, guid: a91e376de5e2b2a4096325253df85bc4,
     type: 3}
