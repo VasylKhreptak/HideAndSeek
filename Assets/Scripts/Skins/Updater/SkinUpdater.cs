@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Skins.Updater
 {
-    public class SkinUpdater : MonoBehaviour
+    public abstract class SkinUpdater : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private SkinChanger _skinChanger;
