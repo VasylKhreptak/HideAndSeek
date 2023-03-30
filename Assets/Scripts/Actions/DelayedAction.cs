@@ -13,14 +13,16 @@ namespace Actions
         [Header("Preferences")]
         [SerializeField] private float _delay;
 
+        private IDisposable _disposable;
+
         public override void Do()
         {
-            IDisposable disposable = Observable.Timer(TimeSpan.FromSeconds(_delay)).Subscribe(_ =>
+            _disposable?.Dispose();
+
+            _disposable = Observable.Timer(TimeSpan.FromSeconds(_delay)).Subscribe(_ =>
             {
                 _action.Do();
             });
-
-            disposable.Dispose();
         }
     }
 }
