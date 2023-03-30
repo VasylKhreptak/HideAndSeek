@@ -1,67 +1,69 @@
 using System;
 using System.Linq;
 using Data;
-using Physics;
 using Skins;
 using UniRx;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
 
-public class HidePlayerRagdollController : MonoBehaviour
+namespace Physics
 {
-    [Header("Preferences")]
-    [SerializeField] private bool _initialState;
-    [FormerlySerializedAs("_kvps")]
-    [SerializeField] private KVP[] _KVPs;
-
-    private RagdollControl _activeRagdollControl;
-
-    private PlayerDataProvider _playerDataProvider;
-
-    private IDisposable _disposable;
-
-    [Inject]
-    private void Construct(PlayerDataProvider playerDataProvider)
+    public class HidePlayerRagdollController : MonoBehaviour
     {
-        _playerDataProvider = playerDataProvider;
-    }
+        [Header("Preferences")]
+        [SerializeField] private bool _initialState;
+        [FormerlySerializedAs("_kvps")]
+        [SerializeField] private KVP[] _KVPs;
 
-    #region MonoBehaviour
+        private RagdollControl _activeRagdollControl;
 
-    private void Start()
-    {
-        UpdateCurrentRagdollControl(_playerDataProvider.Data.skinData.currentHideSkin.Value);
-        SetActive(_initialState);
-        _disposable = _playerDataProvider.Data.skinData.currentHideSkin.Subscribe(UpdateCurrentRagdollControl);
-    }
+        private PlayerDataProvider _playerDataProvider;
 
-    private void OnDestroy()
-    {
-        _disposable.Dispose();
-    }
+        private IDisposable _disposable;
 
-    #endregion
+        [Inject]
+        private void Construct(PlayerDataProvider playerDataProvider)
+        {
+            _playerDataProvider = playerDataProvider;
+        }
 
-    public void SetActive(bool state)
-    {
-        _activeRagdollControl.SetActive(state);
-    }
+        #region MonoBehaviour
 
-    public Rigidbody[] GetRigidbodies()
-    {
-        return _activeRagdollControl.GetRigidbodies();
-    }
+        private void Start()
+        {
+            UpdateCurrentRagdollControl(_playerDataProvider.Data.skinData.currentHideSkin.Value);
+            SetActive(_initialState);
+            _disposable = _playerDataProvider.Data.skinData.currentHideSkin.Subscribe(UpdateCurrentRagdollControl);
+        }
 
-    private void UpdateCurrentRagdollControl(Skin skin)
-    {
-        _activeRagdollControl = _KVPs.First(x => x.skin == skin).ragdollControl;
-    }
+        private void OnDestroy()
+        {
+            _disposable.Dispose();
+        }
 
-    [Serializable]
-    private class KVP
-    {
-        public RagdollControl ragdollControl;
-        public Skin skin;
+        #endregion
+
+        public void SetActive(bool state)
+        {
+            _activeRagdollControl.SetActive(state);
+        }
+
+        public Rigidbody[] GetRigidbodies()
+        {
+            return _activeRagdollControl.GetRigidbodies();
+        }
+
+        private void UpdateCurrentRagdollControl(Skin skin)
+        {
+            _activeRagdollControl = _KVPs.First(x => x.skin == skin).ragdollControl;
+        }
+
+        [Serializable]
+        private class KVP
+        {
+            public RagdollControl ragdollControl;
+            public Skin skin;
+        }
     }
 }
